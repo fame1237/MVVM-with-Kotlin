@@ -275,3 +275,27 @@ fun `loadUser with valid id returns success state`() = runTest {
 # (Optional) รัน Connected Tests (UI Tests)
 ./gradlew connectedCheck
 ```
+
+---
+
+## 🎲 Lottery Analysis Engine
+
+This project now includes a simple prediction engine located in `co.storylog.pinto.domain.analysis`. It provides functions for:
+
+- Calculating digit frequencies across historical results.
+- Determining hot and cold numbers based on recent draws.
+- Finding the most common two-digit pairs.
+- Generating naive predictions for two and three digit prizes.
+
+Unit tests demonstrating the usage of these functions can be found in `app/src/test/java/co/storylog/pinto/domain/analysis`.
+
+### New Sample Implementation
+
+A simple Compose UI demonstrates a clean separation between layers:
+
+- **Repository** – `FakeLotteryRepository` supplies lottery data.
+- **UseCase** – `GeneratePredictionsUseCase` performs analysis and exposes predictions.
+- **ViewModel** – `LotteryViewModel` holds UI state and triggers the use case.
+- **UI** – `LotteryScreen` renders the predictions using Jetpack Compose.
+
+See `MainActivity` for how these pieces are wired together.
