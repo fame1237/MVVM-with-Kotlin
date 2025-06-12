@@ -18,13 +18,13 @@
 
 -   `app`: โมดูลหลักสำหรับ UI และเป็นจุดเริ่มต้นของแอปพลิเคชัน
 -   `repository`: โมดูลสำหรับจัดการ Data Source (Interfaces)
--   `co.storylog.pinto`: แพ็กเกจหลักของแอปพลิเคชัน (Data, Domain, Presentation Layers)
--   `co.storylog.database`: แพ็กเกจสำหรับจัดการ Local Database (Room)
+-   `chawan.fame.testmvvm`: แพ็กเกจหลักของแอปพลิเคชัน (Data, Domain, Presentation Layers)
+-   `chawan.fame.testmvvm.database`: แพ็กเกจสำหรับจัดการ Local Database (Room)
 
 ### Package Structure
 
 ```
-co.storylog.pinto/
+chawan.fame.testmvvm/
 ├── data/
 │   └── repositories/         # Repository implementations (*RepositoryImpl.kt)
 ├── domain/
@@ -39,13 +39,13 @@ co.storylog.pinto/
 │   └── base/              # Base UI components (Button, TextField, etc.)
 └── extension/             # Extension functions
 
-co.storylog.database/
+chawan.fame.testmvvm.database/
 ├── database/                # Database setup & configurations
 ├── model/                   # Room Entities (*Entity.kt)
 ├── query/                   # Room DAOs (*Dao.kt)
 └── table/                   # Table definitions (if needed)
 
-co.storylog.repository.repo/
+chawan.fame.testmvvm.repository.repo/
 └── repositories/            # Repository interfaces (*Repository.kt)
 ```
 
